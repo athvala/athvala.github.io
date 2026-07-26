@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anžej Hvala</title>
+<meta name="description" content="Co-founder and CEO of Simplified AI. Building Dexter — AI governance for regulated European enterprises.">
+<link rel="canonical" href="https://athvala.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anžej Hvala">
+<meta property="og:description" content="Co-founder and CEO of Simplified AI. Building Dexter — AI governance for regulated European enterprises.">
+<meta property="og:url" content="https://athvala.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#EDEEF0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316191D'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='18' font-weight='700' fill='%23EDEEF0' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:opsz,wght@6..72,300..400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#EDEEF0;
+    --panel:#E4E7EB;
+    --ink:#16191D;
+    --muted:#5A6169;
+    --rule:#C9CED5;
+    --live:#2F5D50;
+    --ended:#8A4B3A;
+
+    --display:'Archivo', system-ui, sans-serif;
+    --body:'Newsreader', Georgia, serif;
+    --mono:'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  a{color:inherit;}
+  a:focus-visible{
+    outline:2px solid var(--live);
+    outline-offset:3px;
+  }
+
+  /* ---------- eyebrow / labels ---------- */
+  .label{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
+    padding:34px 0 0;
+    flex-wrap:wrap;
+  }
+  .masthead .name{
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:76px 0 86px;}
+  .hero h1{
+    font-family:var(--display);
+    font-variation-settings:'wdth' 112, 'wght' 800;
+    font-size:clamp(38px, 7.4vw, 82px);
+    line-height:.98;
+    letter-spacing:-.022em;
+    margin:0 0 34px;
+    max-width:16ch;
+  }
+  .hero h1 em{
+    font-style:normal;
+    font-variation-settings:'wdth' 78, 'wght' 400;
+    display:block;
+    color:var(--muted);
+    font-size:.44em;
+    line-height:1.2;
+    letter-spacing:0;
+    margin-top:22px;
+    max-width:30ch;
+  }
+  .hero p{
+    font-size:20px;
+    line-height:1.62;
+    max-width:56ch;
+    margin:0 0 30px;
+    color:#2A2F36;
+  }
+  .contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 26px;
+    font-family:var(--mono);
+    font-size:13px;
+  }
+  .contact a{
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+    transition:border-color .18s ease, color .18s ease;
+  }
+  .contact a:hover{border-color:var(--live);color:var(--live);}
+
+  /* ---------- record ---------- */
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    padding-bottom:14px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .section-head .note{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.05em;
+    color:var(--muted);
+    margin-left:auto;
+  }
+
+  .entry{
+    display:grid;
+    grid-template-columns:112px 1fr;
+    gap:0 28px;
+    padding:30px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .entry .when{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--muted);
+    padding-top:7px;
+  }
+  .entry h3{
+    font-family:var(--display);
+    font-variation-settings:'wdth' 100, 'wght' 700;
+    font-size:24px;
+    letter-spacing:-.01em;
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .entry p{
+    margin:0;
+    max-width:64ch;
+    color:#2A2F36;
+    font-size:17.5px;
+    line-height:1.6;
+  }
+  .entry p + p{margin-top:12px;}
+
+  .status{
+    font-family:var(--mono);
+    font-size:10.5px;
+    font-weight:500;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:4px 9px 3px;
+    border:1px solid currentColor;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .status.is-live{color:var(--live);}
+  .status.is-ended{color:var(--ended);}
+
+  /* ---------- built ---------- */
+  .built{padding-top:70px;}
+  .built-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .built-list li{
+    padding:24px 0;
+    border-bottom:1px solid var(--rule);
+    display:grid;
+    grid-template-columns:112px 1fr;
+    gap:0 28px;
+  }
+  .built-list .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    padding-top:5px;
+  }
+  .built-list strong{
+    font-family:var(--display);
+    font-variation-settings:'wdth' 100, 'wght' 650;
+    font-size:18px;
+    display:block;
+    margin-bottom:5px;
+  }
+  .built-list p{margin:0;font-size:17px;max-width:62ch;color:#2A2F36;}
+  .built-list a{color:var(--live);text-decoration:none;border-bottom:1px solid rgba(47,93,80,.35);}
+  .built-list a:hover{border-bottom-color:var(--live);}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:80px;
+    padding:34px 0 60px;
+    border-top:1.5px solid var(--ink);
+    display:flex;
+    justify-content:space-between;
+    gap:20px 40px;
+    flex-wrap:wrap;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.7;
+  }
+  .foot p{margin:0;max-width:44ch;}
+
+  /* ---------- motion ---------- */
+  .rise{opacity:0;transform:translateY(14px);animation:rise .6s cubic-bezier(.22,.7,.3,1) forwards;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion:reduce){
+    .rise{animation:none;opacity:1;transform:none;}
+    *{transition:none !important;}
+  }
+
+  /* ---------- mobile ---------- */
+  @media (max-width:640px){
+    body{font-size:17px;}
+    .wrap{padding:0 20px;}
+    .hero{padding:52px 0 62px;}
+    .hero p{font-size:18px;}
+    .entry,.built-list li{grid-template-columns:1fr;gap:10px;}
+    .entry .when,.built-list .tag{padding-top:0;}
+    .entry h3{font-size:21px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead rise" style="animation-delay:.05s">
+    <span class="name">Anžej Hvala</span>
+    <span class="label">Barcelona · Founder</span>
+  </header>
+
+  <section class="hero">
+    <h1 class="rise" style="animation-delay:.12s">
+      Rules change faster than incumbents do.
+      <em>I've built one business on that. I'm building another.</em>
+    </h1>
+    <p class="rise" style="animation-delay:.22s">
+      Co-founder and CEO of Simplified AI, where we build Dexter — AI governance and
+      observability for regulated European enterprises. Before that I built Eagle Events
+      from a high-school side project into Slovenia's largest catering provider, and left
+      it running without me.
+    </p>
+    <nav class="contact rise" style="animation-delay:.3s" aria-label="Contact">
+      <a href="mailto:tomaz@thesimplified.io">Email</a>
+      <a href="https://www.linkedin.com/in/anzej-tomaz-hvala-736928199/" target="_blank" rel="me noopener">LinkedIn</a>
+      <a href="https://x.com/AnzejTHvala" target="_blank" rel="me noopener">X</a>
+      <a href="https://github.com/athvala" target="_blank" rel="me noopener">GitHub</a>
+    </nav>
+  </section>
+
+  <section aria-labelledby="record-head">
+    <div class="section-head">
+      <span class="label" id="record-head">Record</span>
+      <span class="note">including the ones that didn't work</span>
+    </div>
+
+    <article class="entry">
+      <div class="when">2025 —</div>
+      <div>
+        <h3>Simplified AI <span class="status is-live">In production</span></h3>
+        <p>
+          AI governance and observability for regulated European enterprises — the evidence a
+          compliance officer hands an auditor, not another dashboard for engineers. Running in
+          production at NGEN, a Slovenian energy utility, as a €52k deployment. Selling into
+          utilities ahead of EU AI Act enforcement in August 2026.
+        </p>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="when">2019 —</div>
+      <div>
+        <h3>Eagle Events <span class="status is-live">Operator-run</span></h3>
+        <p>
+          Started it in high school. Now Slovenia's largest catering provider, up 200% last year.
+          In 2025 we took beverage operations at Pivo in Cvetje — 60,000 people, the country's
+          biggest festival — from a supplier who had held it for twenty years.
+        </p>
+        <p>
+          New EU rules had just banned single-use cups, and everyone was treating the reusable cup
+          as one problem: a deposit item you hand back at the bar. That was what created the queues.
+          We made the cup a souvenir people were meant to keep, moved returns off the bars entirely,
+          and paid a bounty on volume — so attendees collected the cups off the ground themselves.
+          Operator-run since August 2025.
+        </p>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="when">2024 — 25</div>
+      <div>
+        <h3>CERN &amp; European Commission <span class="status is-ended">Selected, then excluded</span></h3>
+        <p>
+          Selected to run a proof of concept at CERN as the first Slovenian software company, and
+          bid into a DG CNECT tender for multilingual AI chatbots. Both ended the same way: excluded
+          on a procurement rule requiring two years of company history we did not yet have. The
+          work cleared the bar. The incorporation date didn't.
+        </p>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="when">2023 — 24</div>
+      <div>
+        <h3>Sense Club <span class="status is-ended">Closed at a loss</span></h3>
+        <p>
+          Opened a nightclub in Celje and closed it twelve months later at a personal loss. The
+          failure was structural, not operational: I signed a lease and took on fixed monthly costs
+          sized for a demand curve I had only ever seen in events, where a bad weekend costs nothing
+          because you simply don't run the event. Fixed costs don't give you that option.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="built" aria-labelledby="built-head">
+    <div class="section-head">
+      <span class="label" id="built-head">Built</span>
+      <span class="note">internal tools, my own hands</span>
+    </div>
+
+    <ul class="built-list">
+      <li>
+        <span class="tag">Forecasting</span>
+        <div>
+          <strong>Inventory forecaster</strong>
+          <p>
+            Predicts beverage volume per event from historical throughput, ticket sales and weather.
+            Over-ordering and under-ordering are the two ways a catering contract loses money.
+            <a href="https://github.com/athvala/Eagle-events-zaloga" target="_blank" rel="noopener">Source</a>
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="tag">Operations</span>
+        <div>
+          <strong>Staffing &amp; timesheets</strong>
+          <p>
+            Rostering, shift assignment and payroll across event crews. Replaced a spreadsheet-and-
+            WhatsApp process and saves about 30 hours of admin a month.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="tag">Agents</span>
+        <div>
+          <strong>Internal Slack agents</strong>
+          <p>
+            Daily digests and automated inbound email triage across both companies. Self-hosted on a
+            VPS I provision myself — I write the specs and prompts, and debug them when they break.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p>
+      BA Finance, University of Ljubljana. MSc, Esade &amp; McIntire School of Commerce.
+    </p>
+    <p>
+      Based in Barcelona. Slovenian, English, Spanish.<br>
+      Open to conversations about AI governance in regulated industries.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
